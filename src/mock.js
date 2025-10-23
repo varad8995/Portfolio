@@ -1,7 +1,7 @@
 export const portfolioData = {
   hero: {
-    name: "Python Developer",
-    title: "Backend & Generative AI Specialist",
+    name: "Varad Bhalsing",
+    title: "Python Devloper & Gen Ai Devloper",
     description: "Building scalable systems and intelligent solutions. Specialized in Python backend development and cutting-edge generative AI implementations.",
     email: "varadbhalsing71@gmail.com",
     github: "https://github.com/varad8995",
