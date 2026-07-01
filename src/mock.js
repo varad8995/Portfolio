@@ -1,152 +1,99 @@
 export const portfolioData = {
   hero: {
     name: "Varad Bhalsing",
-    title: "Python Devloper & Gen Ai Devloper",
+    title: "Python Developer & GenAI Developer",
     description: "Building scalable systems and intelligent solutions. Specialized in Python backend development and cutting-edge generative AI implementations.",
     email: "varadbhalsing71@gmail.com",
     github: "https://github.com/varad8995",
     linkedin: "https://www.linkedin.com/in/varad-bhalsing-168054204/"
   },
-  
+
   about: {
-    text: "I'm a Python developer passionate about creating robust backend systems and exploring the frontiers of generative AI. With expertise in building scalable architectures, I focus on delivering solutions that are both technically excellent and practically valuable. My work spans from API development to implementing state-of-the-art AI models."
+    text: "I'm a Python Backend Engineer with 3+ years of experience designing and scaling production-grade APIs, microservices, and GenAI/RAG applications. I focus on retrieval-grounded generation, structured prompt engineering, and building resilient distributed systems with failure isolation and graceful degradation."
   },
-  
+
   experience: [
     {
       id: 1,
       title: "Python Developer",
-      company: "Culinda Inc",
-      period: "Oct 2023 - Current",
-      description: "• Built RESTful APIs using FastAPI for scalable backend services\n\
-• Implemented webhooks for real-time scan completion notifications\n\
-• Developed integrations within SOAR platforms like Swimlane, including automated blocking of typosquatting domains\n\
-• Created RAG-based applications leveraging LLMs for intelligent information retrieval\n\
-• Deployed deep learning models to enhance data-driven decision-making processes\n\
-• Led NLP projects to extract actionable insights from large volumes of unstructured data\n\
-• Collaborated with a team to build a sentiment analysis application for platforms like Twitter, Instagram, Facebook, and YouTube\n\
-• Continuously improved AI-driven solutions to enhance system performance and reliability",
-      technologies: ["Python", "FastAPI", "LLM", "GenAI", "LangChain", "MongoDB", "MySQL", "AWS"]
-    },
-    {
-      id: 2,
-      title: "Python Intern",
-      company: "Culinda Inc",
-      period: "March 2023 - Oct 2023",
-      description: "• Developed RESTful APIs to support backend functionality\n\
-• Crawled data from websites to enrich datasets used in LLMs\n\
-• Automated scripts to monitor and manage database storage efficiently\n\
-• Integrated and worked with SOAR platforms like Swimlane for workflow automation and incident response",
-      technologies: ["Python", "MySQL", "MongoDB", "FastAPI"]
+      company: "Culinda Inc.",
+      period: "March 2023 - Present",
+      description: "RAG System & LLM Integration\n\
+• Built a production RAG pipeline (Weaviate vector DB + LLM) for intelligent document querying; tuned chunking strategy, embedding config, and retrieval-grounded context injection to improve relevance by ~40%, cut query response time from ~8s to under 4s, and reduce LLM hallucination rate by ~35%\n\
+• Introduced Redis caching for API responses, session storage, and rate limiting, eliminating ~70% of repeated DB hits and reducing p95 latency on high-traffic endpoints by ~50%\n\
+• Containerized 5+ FastAPI microservices with Docker; managed Kubernetes deployments with ConfigMaps, liveness/readiness probes, and rolling updates across production clusters\n\
+\n\
+Vendor Onboarding & Scan Engine\n\
+• Redesigned scan execution engine from sequential to concurrent (30 tools/scan), reducing per-scan latency by ~60% and cutting CPU utilization to manageable levels under sustained load\n\
+• Built multi-step vendor onboarding workflow with dynamic form flows, staged approval pipeline, and role-based access; led end-to-end feature from design to deployment\n\
+• Added per-tool timeouts, retry logic, and failure isolation with structured error handling, eliminating cascading failures and reducing error-induced scan aborts by ~80%\n\
+• Deployed onboarding service on Kubernetes with rolling update strategy, achieving zero-downtime upgrades across all production releases\n\
+• Integrated async email dispatch (SMTP / SendGrid) and paginated in-app notification API, reducing delivery latency and enabling read/unread state tracking at scale\n\
+\n\
+Sentiment Analysis Platform\n\
+• Co-built (4-person team) a sentiment analysis platform ingesting data from Twitter, Instagram, Facebook, and YouTube for client social media monitoring",
+      technologies: ["Python", "FastAPI", "Pydantic", "RAG", "LangChain", "LangGraph", "Weaviate", "Redis", "Docker", "Kubernetes", "AWS"]
     }
   ],
 
-  
   projects: [
     {
       id: 1,
-      name: "Coverly",
-      description: "Coverly is an AI-powered tool that helps you generate stunning, click-worthy YouTube thumbnails in just seconds. By combining generative AI with trending design insights, it creates thumbnails optimized for higher engagement and views. Just enter a video description and upload a reference image — and Coverly handles the rest like magic.",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
-      technologies: ["Python", "FastAPI", "GenAI","OpenAi","LangGraph","LangSmith","Valkey", "s3", "Supabase"],
-      link: "#"
+      name: "Distributed Task Queue System",
+      description: "Built a distributed background job system using Redis as the job broker with worker-based execution, retry logic, and real-time job status tracking; offloaded long-running tasks to keep core API response times fast under load.",
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+      technologies: ["Python", "FastAPI", "Redis", "Docker"],
+      link: "https://github.com/varad8995"
     },
     {
       id: 2,
-      name: "Instant",
-      description: "Real-time messaging platform with AI-powered content moderation. Handles millions of messages with sub-second latency.",
-      image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&q=80",
-      technologies: ["Python", "WebSockets", "Redis", "MongoDB", "Transformers"],
-      link: "#"
-    },
-    {
-      id: 3,
-      name: "Darkeye",
-      description: "Decentralized computing network for AI workloads. Backend infrastructure for distributed GPU processing and model training.",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
-      technologies: ["Python", "gRPC", "Kubernetes", "CUDA", "PyTorch"],
-      link: "#"
-    },
-    {
-      id: 4,
-      name: "ForAI - Pocket Contact",
-      description: "AI-powered contact management system with intelligent categorization. Uses NLP for automatic contact enrichment and relationship insights.",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80",
-      technologies: ["Python", "spaCy", "FastAPI", "OpenAI API", "SQLite"],
-      link: "#"
-    },
-    {
-      id: 5,
-      name: "B3 – Future of Onchain Gaming",
-      description: "Backend infrastructure for blockchain-based gaming platform. Smart contract integration and real-time game state management.",
-      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80",
-      technologies: ["Python", "Web3.py", "FastAPI", "PostgreSQL", "Redis"],
-      link: "#"
-    },
-    {
-      id: 6,
-      name: "Rise Calendar",
-      description: "Intelligent scheduling system with AI-driven conflict resolution. Automated meeting optimization and smart reminders.",
-      image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&q=80",
-      technologies: ["Python", "FastAPI", "Celery", "OpenAI API", "PostgreSQL"],
-      link: "#"
-    },
-    {
-      id: 7,
-      name: "Garage Lab – AI",
-      description: "Experimental AI research platform. Backend for training, fine-tuning, and deploying custom language models at scale.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
-      technologies: ["Python", "PyTorch", "Transformers", "MLflow", "Docker"],
-      link: "#"
-    },
-    {
-      id: 8,
-      name: "2030 Forecast by Doconomy",
-      description: "Climate impact prediction system using advanced ML models. Processes environmental data for sustainability forecasting.",
-      image: "https://images.unsplash.com/photo-1569163139394-de4798aa62b6?w=800&q=80",
-      technologies: ["Python", "Scikit-learn", "Pandas", "FastAPI", "TimeSeries"],
-      link: "#"
+      name: "Coverly - AI Image Generation Platform",
+      description: "Backend platform converting natural language prompts to images via Generative AI APIs with async inference processing; used LangSmith for LLM workflow tracing and built prompt enrichment logic to improve output consistency.",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
+      technologies: ["Python", "FastAPI", "Generative AI APIs", "LangSmith"],
+      link: "https://github.com/varad8995"
     }
   ],
-  
+
   skills: {
     backend: [
       "Python",
       "FastAPI",
-      "Django",
-      "RESTful APIs",
-      "GraphQL",
-      "WebSockets"
+      "Pydantic",
+      "REST API Design",
+      "OpenAPI/Swagger",
+      "Async Programming"
     ],
     ai: [
-      "OpenAI API",
+      "RAG Architecture",
+      "Vector Embeddings",
+      "LLM Integration",
+      "Prompt Engineering",
       "LangChain",
-      "LangGraoh",
       "LangSmith",
-      "Transformers",
-      "Hugging Face",
+      "Weaviate",
     ],
     databases: [
       "PostgreSQL",
+      "MySQL",
       "MongoDB",
-      "Redis",
-      "SQLite",
-      "Vector Databases",
+      "Redis"
     ],
     devops: [
       "Docker",
+      "Kubernetes",
       "AWS",
-      "CI/CD",
+      "ConfigMaps",
+      "Rolling Deployments",
       "Git",
-      "Linux",
-      "Monitoring"
+      "Postman"
     ]
   },
-  
+
   contact: {
     email: "varadbhalsing71@gmail.com",
     github: "https://github.com/varad8995",
     linkedin: "https://www.linkedin.com/in/varad-bhalsing-168054204/",
-    location: "Pune , IN"
+    location: "Pune, IN"
   }
 };
